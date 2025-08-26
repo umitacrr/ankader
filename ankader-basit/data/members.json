@@ -1,0 +1,58 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "photo": "assets/default-avatar.png",
+      "name": "Ümit Acar",
+      "phone": "0532 123 4567",
+      "email": "umit.acar@example.com",
+      "graduationYear": 2020,
+      "university": "Medeniyet Üniversitesi",
+      "department": "Elektrik Elektronik Mühendisliği",
+      "status": "active",
+      "joinDate": "2021-01-15",
+      "notes": "Ana yönetici",
+      "customFields": {
+        "meslek": "Yazılım Geliştirici",
+        "şehir": "İstanbul",
+        "yaş": "30"
+      }
+    },
+    {
+      "id": 2,
+      "photo": "assets/default-avatar.png",
+      "name": "Hüseyin Karal",
+      "phone": "0533 987 6543",
+      "email": "huseyin.karal@example.com",
+      "graduationYear": 2019,
+      "university": "Marmara Üniversitesi",
+      "department": "Eczacılık",
+      "status": "active",
+      "joinDate": "2020-09-10",
+      "notes": "Yönetim kurulu üyesi",
+      "customFields": {
+        "meslek": "Eczacı",
+        "şehir": "İstanbul",
+        "yaş": "28"
+      }
+    },
+    {
+      "id": 3,
+      "photo": "assets/default-avatar.png",
+      "name": "Emre Boylu",
+      "phone": "0534 555 1234",
+      "email": "emre.boylu@example.com",
+      "graduationYear": 2021,
+      "university": "Doğuş Üniversitesi",
+      "department": "İnşaat Mühendisliği",
+      "status": "active",
+      "joinDate": "2022-03-20",
+      "notes": "Aktif üye",
+      "customFields": {
+        "meslek": "Mühendis",
+        "şehir": "İstanbul",
+        "yaş": "25"
+      }
+    }
+  ]
+}

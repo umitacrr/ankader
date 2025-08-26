@@ -1,0 +1,14 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "name": "ACAR",
+      "phone": "05000000000",
+      "password": "acar2024!",
+      "role": "main_admin",
+      "lastLogin": null,
+      "createdDate": "2024-08-24T06:00:00.000Z"
+    }
+  ],
+  "activityLogs": []
+}

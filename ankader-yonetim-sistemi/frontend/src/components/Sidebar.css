@@ -1,0 +1,144 @@
+.sidebar {
+  width: 250px;
+  background: #2c3e50;
+  color: white;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  transition: transform 0.3s ease;
+  z-index: 99;
+  overflow-y: auto;
+}
+
+.sidebar-open {
+  transform: translateX(0);
+}
+
+.sidebar-closed {
+  transform: translateX(-100%);
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #34495e;
+}
+
+.sidebar-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ecf0f1;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 10px 0;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 2px 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.nav-link:hover {
+  background: #34495e;
+  color: #ecf0f1;
+  border-left-color: #ff7f00;
+}
+
+.nav-link.active {
+  background: #ff7f00;
+  color: white;
+  border-left-color: #e66b00;
+}
+
+.nav-icon {
+  font-size: 16px;
+  margin-right: 12px;
+  width: 20px;
+  text-align: center;
+}
+
+.nav-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid #34495e;
+  margin-top: auto;
+}
+
+.organization-info {
+  text-align: center;
+}
+
+.organization-info h4 {
+  color: #ff7f00;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.organization-info p {
+  color: #95a5a6;
+  font-size: 11px;
+  line-height: 1.4;
+  margin: 4px 0;
+}
+
+.motto {
+  color: #ff7f00 !important;
+  font-style: italic;
+  font-weight: 500 !important;
+  margin-top: 8px !important;
+}
+
+/* Custom Scrollbar */
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #2c3e50;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #34495e;
+  border-radius: 2px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #4a5f7a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 280px;
+  }
+}

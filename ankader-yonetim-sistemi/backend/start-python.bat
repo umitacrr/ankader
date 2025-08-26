@@ -1,0 +1,9 @@
+@echo off
+echo ANKADER Python Backend Baslatiliyor...
+echo.
+echo Paketler kontrol ediliyor...
+python -m pip install -r requirements.txt
+echo.
+echo Server baslatiliyor...
+python app.py
+pause

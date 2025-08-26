@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ff7f00" />
+    <meta name="description" content="ANKADER Dernek Yönetim Sistemi - Pendik İTO Şehit Ahmet Aslanhan Anadolu İmam Hatip Lisesi Mezunları Derneği" />
+    <meta name="keywords" content="ANKADER, dernek, yönetim, mezunlar, Pendik İTO" />
+    <meta name="author" content="ANKADER" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ANKADER Yönetim Sistemi" />
+    <meta property="og:description" content="Pendik İTO Şehit Ahmet Aslanhan Anadolu İmam Hatip Lisesi Mezunları Derneği Yönetim Sistemi" />
+    <meta property="og:image" content="%PUBLIC_URL%/ankader-logo.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="ANKADER Yönetim Sistemi" />
+    <meta property="twitter:description" content="Küllerinden Doğuyor - ANKADER Dernek Yönetim Sistemi" />
+    <meta property="twitter:image" content="%PUBLIC_URL%/ankader-logo.png" />
+    
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/ankader-logo.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
+    
+    <title>ANKADER - Yönetim Sistemi</title>
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f5f5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* Loading Screen */
+      .initial-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #ff7f00 0%, #ff9933 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+      
+      .initial-loading.fade-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      .loading-logo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 30px;
+        animation: pulse 2s infinite;
+      }
+      
+      .loading-text {
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+      }
+      
+      .loading-subtitle {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 16px;
+        text-align: center;
+        max-width: 400px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      
+      .loading-motto {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+        font-style: italic;
+        margin-top: 20px;
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-top: 20px;
+      }
+      
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Hide scrollbar during loading */
+      body.loading {
+        overflow: hidden;
+      }
+      
+      @media (max-width: 768px) {
+        .loading-logo {
+          width: 80px;
+          height: 80px;
+        }
+        
+        .loading-text {
+          font-size: 20px;
+        }
+        
+        .loading-subtitle {
+          font-size: 14px;
+          padding: 0 20px;
+        }
+      }
+    </style>
+  </head>
+  <body class="loading">
+    <noscript>
+      <div style="padding: 20px; text-align: center; color: #ff7f00;">
+        <h2>JavaScript Gerekli</h2>
+        <p>ANKADER Yönetim Sistemi'ni kullanmak için JavaScript'i etkinleştirmeniz gerekmektedir.</p>
+      </div>
+    </noscript>
+    
+    <!-- Initial Loading Screen -->
+    <div id="initial-loading" class="initial-loading">
+      <img src="/ankader-logo.png" alt="ANKADER Logo" class="loading-logo" />
+      <div class="loading-text">ANKADER</div>
+      <div class="loading-subtitle">
+        Pendik İTO Şehit Ahmet Aslanhan Anadolu<br>
+        İmam Hatip Lisesi Mezunları Derneği<br>
+        Yönetim Sistemi
+      </div>
+      <div class="loading-spinner"></div>
+      <div class="loading-motto">"Küllerinden Doğuyor"</div>
+    </div>
+    
+    <div id="root"></div>
+    
+    <script>
+      // Remove loading screen when React app loads
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('initial-loading');
+          const body = document.body;
+          
+          if (loadingScreen) {
+            loadingScreen.classList.add('fade-out');
+            body.classList.remove('loading');
+            
+            setTimeout(function() {
+              loadingScreen.remove();
+            }, 500);
+          }
+        }, 1000); // Show loading for at least 1 second
+      });
+      
+      // Fallback: Remove loading screen after 5 seconds
+      setTimeout(function() {
+        const loadingScreen = document.getElementById('initial-loading');
+        const body = document.body;
+        
+        if (loadingScreen) {
+          loadingScreen.classList.add('fade-out');
+          body.classList.remove('loading');
+          
+          setTimeout(function() {
+            loadingScreen.remove();
+          }, 500);
+        }
+      }, 5000);
+    </script>
+  </body>
+</html>

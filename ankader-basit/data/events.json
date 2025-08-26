@@ -1,0 +1,32 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Mezunlar Buluşması 2024",
+      "description": "Yıllık mezunlar buluşması ve networking etkinliği",
+      "date": "2024-09-15",
+      "time": "19:00",
+      "location": "Okul Bahçesi",
+      "status": "planned",
+      "participants": [1, 2],
+      "budget": {
+        "estimated": 5000,
+        "actual": 0
+      }
+    },
+    {
+      "id": 2,
+      "title": "Yönetim Kurulu Toplantısı",
+      "description": "Aylık rutin yönetim kurulu toplantısı",
+      "date": "2024-08-30",
+      "time": "20:00",
+      "location": "Online - Zoom",
+      "status": "confirmed",
+      "participants": [2],
+      "budget": {
+        "estimated": 0,
+        "actual": 0
+      }
+    }
+  ]
+}

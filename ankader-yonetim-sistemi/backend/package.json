@@ -1,0 +1,21 @@
+{
+  "name": "ankader-backend-python",
+  "version": "1.0.0",
+  "description": "ANKADER Dernek Yönetim Sistemi Backend - Python Flask",
+  "main": "app.py",
+  "scripts": {
+    "start": "python app.py",
+    "dev": "python app.py",
+    "install": "pip install -r requirements.txt"
+  },
+  "keywords": [
+    "dernek",
+    "yonetim",
+    "ankader",
+    "python",
+    "flask"
+  ],
+  "author": "ANKADER",
+  "license": "MIT",
+  "note": "Bu proje artık Python Flask kullanıyor. Çalıştırmak için: python app.py"
+}

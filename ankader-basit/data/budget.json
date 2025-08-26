@@ -1,0 +1,57 @@
+{
+  "budget": {
+    "totalIncome": 25000,
+    "totalExpense": 18500,
+    "balance": 6500
+  },
+  "transactions": [
+    {
+      "id": 1,
+      "type": "income",
+      "amount": 15000,
+      "description": "Üye aidatları",
+      "date": "2024-01-15",
+      "category": "membership"
+    },
+    {
+      "id": 2,
+      "type": "income",
+      "amount": 10000,
+      "description": "Bağış",
+      "date": "2024-02-20",
+      "category": "donation"
+    },
+    {
+      "id": 3,
+      "type": "expense",
+      "amount": 8500,
+      "description": "Etkinlik masrafları",
+      "date": "2024-03-10",
+      "category": "event"
+    },
+    {
+      "id": 4,
+      "type": "expense",
+      "amount": 5000,
+      "description": "Ofis kira",
+      "date": "2024-04-01",
+      "category": "office"
+    },
+    {
+      "id": 5,
+      "type": "expense",
+      "amount": 3000,
+      "description": "Web sitesi ve teknoloji",
+      "date": "2024-05-15",
+      "category": "technology"
+    },
+    {
+      "id": 6,
+      "type": "expense",
+      "amount": 2000,
+      "description": "Kırtasiye ve malzemeler",
+      "date": "2024-06-20",
+      "category": "supplies"
+    }
+  ]
+}
